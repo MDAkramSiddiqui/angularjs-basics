@@ -32,7 +32,7 @@ app.config([
         url: '/todo',
         views: {
           main: {
-            templateUrl: 'todo.html',
+            templateUrl: 'minitasks/todo.html',
           },
         },
       })
@@ -40,7 +40,7 @@ app.config([
         url: '/watch',
         views: {
           main: {
-            templateUrl: 'watch.html',
+            templateUrl: 'minitasks/watch.html',
           },
         },
       })
@@ -48,7 +48,7 @@ app.config([
         url: '/animate',
         views: {
           main: {
-            templateUrl: 'animate.html',
+            templateUrl: 'minitasks/animate.html',
           },
         },
       });
