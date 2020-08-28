@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directives + ui-router</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="d-flex bg-light py-3 px-3 justify-content-center my-navbar"
+      ng-controller="navController"
+    >
+      <a class="navbar-brand my-navbar-link" ui-sref="/" ng-cloak>
+        {{heading}}
+      </a>
+    </nav>
+
+    <main class="my-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 no-float">
+            <sidebar></sidebar>
+          </div>
+          <div class="col-md-9 no-float">
+            <ui-view></ui-view>
+            <div ui-view="main"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

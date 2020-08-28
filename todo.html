@@ -1,0 +1,88 @@
+<style>
+  .my-todo {
+    padding: 10px 100px;
+  }
+
+  .my-todo div {
+    text-align: center;
+  }
+
+  .my-todo input[type='text'] {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 2px dashed #222;
+    transition: all 0.2s;
+  }
+
+  .my-todo input[type='text']:focus {
+    outline: none;
+    border: 2px solid black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+  }
+
+  .my-todo .heading {
+    text-align: center;
+    margin: 10px 0;
+    font-style: 'calibri';
+    font-size: 30px;
+  }
+
+  .my-todo ul {
+    padding: 10px 30px;
+    list-style: none;
+  }
+
+  .my-todo li {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .my-todo input[type='checkbox'] {
+    margin-right: 5px;
+  }
+
+  .undone {
+    color: orange;
+  }
+
+  .done {
+    text-decoration: line-through;
+    color: green;
+  }
+</style>
+
+<div class="my-todo" ng-controller="todoController">
+  <form ng-submit="submit()" autocomplete="off">
+    <div>
+      <input
+        id="todoinput"
+        type="text"
+        ng-model="name"
+        placeholder="Enter a task"
+      />
+    </div>
+  </form>
+  <p class="heading">Todos</p>
+  <ul>
+    <li
+      class="undone"
+      ng-repeat="item in todos | filter: statusFilter(false)"
+      ng-click="remove(item.index)"
+    >
+      <input type="checkbox" />{{item.title}}
+    </li>
+  </ul>
+
+  <hr />
+  <p class="heading">Done Dana Done</p>
+  <ul>
+    <li
+      class="done"
+      ng-repeat="item in todos | filter: statusFilter(true)"
+      ng-click="add(item.index)"
+    >
+      <input type="checkbox" checked />{{item.title}}
+    </li>
+  </ul>
+</div>

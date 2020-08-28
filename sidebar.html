@@ -1,0 +1,8 @@
+<div>
+  <h3 class="my-sidebar-heading">{{heading}}</h3>
+  <ul class="my-links-list">
+    <li class="my-link" ng-repeat="link in links">
+      <a ui-sref="{{link.state}}">{{link.name}}</a>
+    </li>
+  </ul>
+</div>

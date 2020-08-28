@@ -1,0 +1,49 @@
+<div>
+  <style>
+    .my-animate-div {
+      text-align: center;
+    }
+
+    .animate-div {
+      height: 100px;
+      width: 100px;
+      background-color: cyan;
+      border-radius: 100px;
+      padding-bottom: 100px;
+    }
+
+    .my-button-animate-group {
+      margin-top: 10px;
+    }
+
+    .my-hide {
+      visibility: hidden;
+    }
+  </style>
+  <div class="my-animate-div" ng-controller="animateController">
+    <div class="animate-div" animate-dir></div>
+    <div class="my-button-animate-group">
+      <button class="button" ng-show="!xaxis" ng-click="foo('L')">Left</button>
+      <button class="button" ng-show="xaxis" ng-click="foo('R')">Right</button>
+      <button class="button" ng-show="!yaxis" ng-click="foo('U')">Up</button>
+      <button class="button" ng-show="yaxis" ng-click="foo('D')">Down</button>
+      <span>angular directive ngShow</span>
+    </div>
+    <br />
+    <div class="my-button-animate-group">
+      <button class="button" ng-if="!xaxis" ng-click="foo('L')">Left</button>
+      <button class="button" ng-if="xaxis" ng-click="foo('R')">Right</button>
+      <button class="button" ng-if="!yaxis" ng-click="foo('U')">Up</button>
+      <button class="button" ng-if="yaxis" ng-click="foo('D')">Down</button>
+      <span>angular directive ngIf</span>
+    </div>
+    <br />
+    <div class="my-button-animate-group">
+      <button class="button" my-show="!xaxis" ng-click="foo('L')">Left</button>
+      <button class="button" my-show="xaxis" ng-click="foo('R')">Right</button>
+      <button class="button" my-show="!yaxis" ng-click="foo('U')">Up</button>
+      <button class="button" my-show="yaxis" ng-click="foo('D')">Down</button>
+      <span>custom directive myShow</span>
+    </div>
+  </div>
+</div>

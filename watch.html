@@ -1,0 +1,80 @@
+<div ng-controller="watchArrayController">
+  <h1>Watch for Arrays</h1>
+  <div>
+    <h3>Watch</h3>
+    <button class="button" ng-click="push()">Push</button>
+    <button class="button" ng-click="unshift()">Unshift</button>
+    <button class="button" ng-click="change()">Change</button>
+    <hr />
+    <span> time: {{time1}} </span>
+    <br />
+    <span> changes: {{msg1}} </span>
+    <div>Real Array: {{letters1}}</div>
+  </div>
+
+  <div>
+    <h3>Watch with DeepCloning</h3>
+    <hr />
+    <span> time: {{time4}} </span>
+    <br />
+    <span> changes: {{msg4}} </span>
+    <div>Real Array: {{letters4}}</div>
+  </div>
+
+  <div>
+    <h3>WatchGroup</h3>
+    <hr />
+    <span> time: {{time2}} </span>
+    <br />
+    <span> changes: {{msg2}} </span>
+    <div>Real Array: {{letters2}}</div>
+  </div>
+
+  <div>
+    <h3>WatchCollection</h3>
+    <hr />
+    <span> time: {{time3}} </span>
+    <br />
+    <span> changes: {{msg3}} </span>
+    <div>Real Array: {{letters3}}</div>
+  </div>
+</div>
+<div ng-controller="watchObjectController">
+  <h1>Watch for Objects</h1>
+  <div>
+    <h3>Watch</h3>
+    <button class="button" ng-click="changeVal()">ChangeVal</button>
+    <button class="button" ng-click="changeWholeObject()">
+      ChangeWholeObject
+    </button>
+    <hr />
+    <span> time: {{time1}} </span>
+    <br />
+    <span> changes: {{msg1}} </span>
+    <div>Real Obj: {{obj1}}</div>
+  </div>
+  <div>
+    <h3>Watch with deepCloning</h3>
+    <hr />
+    <span> time: {{time4}} </span>
+    <br />
+    <span> changes: {{msg4}} </span>
+    <div>Real Obj: {{obj4}}</div>
+  </div>
+  <div>
+    <h3>WatchGroup</h3>
+    <hr />
+    <span> time: {{time2}} </span>
+    <br />
+    <span> changes: {{msg2}} </span>
+    <div>Real Obj: {{obj2}}</div>
+  </div>
+  <div>
+    <h3>WatchCollection on Subfield</h3>
+    <hr />
+    <span> time: {{time3}} </span>
+    <br />
+    <span> changes: {{msg3}} </span>
+    <div>Real Obj: {{obj3}}</div>
+  </div>
+</div>
